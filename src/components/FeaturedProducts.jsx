@@ -63,9 +63,11 @@ export default function FeaturedProducts() {
               </span>
               <button
                 onClick={() => addToCart(product)}
-                className="bg-primary-600 text-white px-4 py-2 hover:bg-primary-700 transition-colors"
+                className="border px-4 py-2 rounded-md border-gray-400 text-base font-medium text-gray-600 hover:border-gray-700 transition-colors shadow-gray-300/50 hover:shadow-gray-700/50"
               >
-                Add to Cart
+                <h2 className="text-sm text-center text-gray-600">
+                  Add to Cart
+                </h2>
               </button>
             </div>
           </div>

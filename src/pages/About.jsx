@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8">
+      <h1 className="font-tafabricans text-4xl font-bold text-gray-900 mb-8">
         About Polar Threads
       </h1>
 
@@ -16,7 +16,7 @@ export default function About() {
 
         <div className="space-y-6">
           <div>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+            <h2 className="font-tafabricans text-2xl font-bold text-gray-900 mb-4">
               Our Story
             </h2>
             <p className="text-gray-600">
@@ -27,7 +27,7 @@ export default function About() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+            <h2 className="font-tafabricans text-2xl font-bold text-gray-900 mb-4">
               Our Mission
             </h2>
             <p className="text-gray-600">
@@ -38,7 +38,7 @@ export default function About() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+            <h2 className="font-tafabricans text-2xl font-bold text-gray-900 mb-4">
               Quality Promise
             </h2>
             <p className="text-gray-600">
@@ -51,12 +51,12 @@ export default function About() {
       </div>
 
       <div className="mt-12">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+        <h2 className="font-tafabricans text-2xl font-bold text-gray-900 mb-8">
           Our Values
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+            <h3 className="font-tafabricans text-xl font-semibold text-gray-900 mb-3">
               Sustainability
             </h3>
             <p className="text-gray-600">
@@ -66,7 +66,7 @@ export default function About() {
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+            <h3 className="font-tafabricans text-xl font-semibold text-gray-900 mb-3">
               Quality
             </h3>
             <p className="text-gray-600">
@@ -76,7 +76,7 @@ export default function About() {
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+            <h3 className="font-tafabricans text-xl font-semibold text-gray-900 mb-3">
               Community
             </h3>
             <p className="text-gray-600">

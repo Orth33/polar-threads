@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -16,23 +16,22 @@ export default {
           800: "#075985",
           900: "#0c4a6e",
         },
+        background: "#ffffff",
+        foreground: "#000000",
+        muted: "#f5f5f5",
+        "muted-foreground": "#6b7280",
       },
-    },
-  },
-  plugins: [],
-};
-
-// tailwind.config.js
-
-module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}", // Adjust this if necessary
-  ],
-  theme: {
-    extend: {
       fontFamily: {
-        tafabricans: ["TAFabricans", "sans-serif"], // 'TAFabricans' is the name you gave in @font-face
+        tafabricans: ["TAFabricans", "sans-serif"],
+      },
+      animation: {
+        marquee: "marquee var(--duration) linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
       },
     },
   },

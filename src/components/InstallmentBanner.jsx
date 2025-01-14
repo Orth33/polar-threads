@@ -4,16 +4,16 @@ export default function InstallmentBanner() {
   return (
     <div className="bg-[#F9F8F4] py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="font-tafabricans text-3xl font-bold text-gray-900 mb-4">
-          Shop Now, Pay Later
-        </h2>
-        <p className="text-gray-600 mb-8">
-          Split your purchase into 4 interest-free payments with our flexible
-          payment options
-        </p>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-          {/* Payment Provider Icons */}
+        <div className="flex flex-col items-center gap-4 py-4 sm:gap-8">
+          <h2 className="font-tafabricans text-3xl font-bold text-gray-900 mt-10">
+            Shop Now, Pay Later
+          </h2>
+          <p className="text-gray-600 mb-8">
+            Split your purchase into 4 interest-free payments with our flexible
+            payment options
+          </p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 px-4 sm:px-4">
           <div className="flex flex-col items-center">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Klarna_Payment_Badge.svg/1600px-Klarna_Payment_Badge.svg.png?20200611133815"
@@ -62,7 +62,7 @@ export default function InstallmentBanner() {
           </div>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 pt-4">
           <div className="flex items-center justify-center space-x-8">
             <div className="flex items-center">
               <svg
@@ -117,7 +117,7 @@ export default function InstallmentBanner() {
 
         <Link
           to="/payment-options"
-          className="inline-block mt-10 px-6 py-2 border rounded-md border-gray-400 text-base font-medium text-gray-600 hover:border-gray-700 transition-colors shadow-gray-300/50 hover:shadow-gray-700/50"
+          className="inline-block mt-10 mb-4 px-6 py-2 border rounded-md border-gray-400 text-base font-medium text-gray-600 hover:border-gray-700 transition-colors shadow-gray-300/50 hover:shadow-gray-700/50"
         >
           Learn More
         </Link>

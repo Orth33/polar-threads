@@ -1,27 +1,29 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import Shop from './pages/Shop';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Cart from './pages/Cart';
-import ProductDetails from './pages/ProductDetails';
-import Login from './pages/Auth/Login';
-import Register from './pages/Auth/Register';
-import ShippingPolicy from './pages/Policies/ShippingPolicy';
-import ReturnsExchange from './pages/Policies/ReturnsExchange';
-import FAQ from './pages/Policies/FAQ';
-import SizeGuide from './pages/Policies/SizeGuide';
-import { CartProvider } from './context/CartContext';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Shop from "./pages/Shop";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Cart from "./pages/Cart";
+import ProductDetails from "./pages/ProductDetails";
+import Login from "./pages/Auth/Login";
+import Register from "./pages/Auth/Register";
+import ShippingPolicy from "./pages/Policies/ShippingPolicy";
+import ReturnsExchange from "./pages/Policies/ReturnsExchange";
+import FAQ from "./pages/Policies/FAQ";
+import SizeGuide from "./pages/Policies/SizeGuide";
+import { CartProvider } from "./context/CartContext";
+import FlashSaleBanner from "./components/FlashSaleBanner";
+import "./App.css";
 
 export default function App() {
   return (
     <Router>
       <CartProvider>
         <div className="min-h-screen flex flex-col">
+          <FlashSaleBanner />
           <Navbar />
           <main className="flex-grow">
             <Routes>
