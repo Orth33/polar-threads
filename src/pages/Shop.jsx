@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
+import { Slider } from "@mui/material";
 
 const categories = ["All", "Jackets", "Accessories", "Footwear"];
 
@@ -47,33 +48,64 @@ const products = [
 export default function Shop() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const { addToCart } = useCart();
+  const [searchQuery, setSearchQuery] = useState("");
+  const [priceRange, setPriceRange] = useState([0, 200]);
 
-  const filteredProducts =
-    selectedCategory === "All"
-      ? products
-      : products.filter((product) => product.category === selectedCategory);
+  const filteredProducts = products.filter((product) => {
+    const matchesCategory =
+      selectedCategory === "All" || product.category === selectedCategory;
+    const matchesSearch = product.name
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
+    const matchesPrice =
+      product.price >= priceRange[0] && product.price <= priceRange[1];
+    return matchesCategory && matchesSearch && matchesPrice;
+  });
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="font-tafabricans text-3xl font-bold text-gray-900 mb-8">
+      {/* <h1 className="font-tafabricans text-3xl font-bold text-gray-900 mb-8">
         Shop
-      </h1>
+      </h1> */}
+      <div className="flex flex-row justify-between">
+        {/* Categories */}
+        <div className="flex space-x-4 mb-8">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-4 py-2 rounded-md ${
+                selectedCategory === category
+                  ? "bg-primary-600 text-white"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
 
-      {/* Categories */}
-      <div className="flex space-x-4 mb-8">
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 rounded-md ${
-              selectedCategory === category
-                ? "bg-primary-600 text-white"
-                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-            }`}
-          >
-            {category}
-          </button>
-        ))}
+        {/* Search Bar */}
+        <div className="mb-8">
+          <input
+            type="text"
+            placeholder="Search products..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-pink-400"
+          />
+        </div>
+        {/* Price Range Slider
+        <div className="mb-8">
+          <Slider
+            value={priceRange}
+            onChange={(e, newValue) => setPriceRange(newValue)}
+            valueLabelDisplay="auto"
+            min={0}
+            max={200}
+            className="w-full"
+          />
+        </div> */}
       </div>
 
       {/* Products Grid */}
