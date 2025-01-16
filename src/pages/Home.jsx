@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Carousel from "../components/Carousel";
 import FeaturedProducts from "../components/FeaturedProducts";
 import InstallmentBanner from "../components/InstallmentBanner";
@@ -8,22 +9,73 @@ import KidsSection from "../components/KidsSection";
 import WhyChooseUs from "../components/WhyChooseUs";
 
 export default function Home() {
+  const slideFromBottom = {
+    initial: { opacity: 1, y: 100 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.7 },
+  };
+
+  const slidwewFAromLeft = {
+    initial: { x: 150 },
+    whileInView: { x: 0 },
+    viewport: { once: true },
+    animate: { opacity: 1, scale: 1 },
+    transition: { duration: 0.7 },
+  };
+
+  const slideFromLeft = {
+    initial: { opacity: 0, x: -100 },
+    whileInView: { opacity: 1, x: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.7 },
+  };
+
+  const slideFromRight = {
+    initial: { opacity: 0, x: 100 },
+    whileInView: { opacity: 1, x: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.7 },
+  };
+
   return (
     <div>
       <Carousel />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="font-tafabricans text-3xl font-bold text-gray-900 mb-8">
+
+      <motion.div
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+        {...slideFromBottom}
+      >
+        <motion.h2
+          className="font-tafabricans text-3xl font-bold text-gray-900 mb-8"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           Featured Products
-        </h2>
+        </motion.h2>
         <FeaturedProducts />
-      </div>
-      {/* <FlashSaleBanner /> */}
-      <KidsSection />
-      <div>
+      </motion.div>
+
+      <motion.div {...slideFromLeft}>
+        <KidsSection />
+      </motion.div>
+
+      <motion.div {...slideFromRight}>
         <InstallmentBanner />
-      </div>
-      <WhyChooseUs />
-      <div>
+      </motion.div>
+
+      <motion.div {...slideFromLeft}>
+        <WhyChooseUs />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+      >
         <TestimonialsSection
           title="Trusted by Winter Fashion Lovers"
           description="See what our customers have to say about their Polar Threads experience"
@@ -66,10 +118,16 @@ export default function Home() {
             },
           ]}
         />
-      </div>
-      <div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+      >
         <NewsletterSignup />
-      </div>
+      </motion.div>
     </div>
   );
 }

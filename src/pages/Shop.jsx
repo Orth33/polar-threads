@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
-import { Slider } from "@mui/material";
+import Input from "../elements/Input";
 
 const categories = ["All", "Jackets", "Accessories", "Footwear"];
 
@@ -76,7 +76,7 @@ export default function Shop() {
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-md ${
                 selectedCategory === category
-                  ? "bg-primary-600 text-white"
+                  ? "bg-black text-white"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >
@@ -87,12 +87,9 @@ export default function Shop() {
 
         {/* Search Bar */}
         <div className="mb-8">
-          <input
-            type="text"
-            placeholder="Search products..."
+          <Input
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-pink-400"
           />
         </div>
         {/* Price Range Slider

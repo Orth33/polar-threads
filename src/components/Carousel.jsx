@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
+import { motion } from "framer-motion";
+import { gsap } from "gsap";
+import { TextPlugin } from "gsap/TextPlugin";
+
 const slides = [
   {
     id: 1,
@@ -31,6 +35,9 @@ const slides = [
 ];
 
 export default function Carousel() {
+  useEffect(() => {
+    gsap.registerPlugin(TextPlugin);
+  }, []);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
@@ -69,13 +76,36 @@ export default function Carousel() {
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
               <div className="text-center text-white px-4">
-                <h2 className="text-4xl md:text-6xl font-bold mb-4">
-                  {slide.title}
-                </h2>
-                <p className="text-lg md:text-xl mb-8">{slide.description}</p>
-                <button className="bg-white text-gray-900 px-8 py-2 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                  {slide.cta}
-                </button>
+                <h2
+                  className="text-4xl md:text-6xl font-bold mb-4"
+                  ref={(el) =>
+                    gsap.to(el, {
+                      duration: 1.1,
+                      text: slide.title,
+                      ease: "none",
+                    })
+                  }
+                ></h2>
+                <p
+                  className="text-lg md:text-xl mb-8"
+                  ref={(p) =>
+                    gsap.to(p, {
+                      duration: 1.1,
+                      text: slide.description,
+                      ease: "none",
+                    })
+                  }
+                ></p>
+                <motion.div
+                  initial={{ opacity: 0, y: -60 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ type: "tween", duration: 0.4 }}
+                >
+                  <button className="bg-white text-gray-900 px-8 py-2 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                    {slide.cta}
+                  </button>
+                </motion.div>
               </div>
             </div>
           </div>
