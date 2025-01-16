@@ -62,8 +62,8 @@ export default function ProductDetails() {
           <h1 className="text-3xl font-bold text-gray-900 mb-4">
             {product.name}
           </h1>
-          <p className="text-2xl text-primary-600 font-bold mb-6">
-            ${product.price}
+          <p className="text-2xl text-gray-600 font-bold mb-6">
+            <strong>${product.price}</strong>
           </p>
           <p className="text-gray-600 mb-6">{product.description}</p>
 
@@ -77,7 +77,7 @@ export default function ProductDetails() {
                   onClick={() => setSelectedSize(size)}
                   className={`px-4 py-2 rounded-md ${
                     selectedSize === size
-                      ? "bg-primary-600 text-white"
+                      ? "bg-black text-white"
                       : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
                 >
@@ -97,7 +97,7 @@ export default function ProductDetails() {
                   onClick={() => setSelectedColor(color)}
                   className={`px-4 py-2 rounded-md ${
                     selectedColor === color
-                      ? "bg-primary-600 text-white"
+                      ? "bg-black text-white"
                       : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
                 >
@@ -107,12 +107,20 @@ export default function ProductDetails() {
             </div>
           </div>
 
-          <button
-            onClick={handleAddToCart}
-            className="w-full bg-primary-600 text-white py-3 rounded-md hover:bg-primary-700 transition-colors"
-          >
-            Add to Cart
-          </button>
+          <div className="w-full flex gap-4 justify-center">
+            <button
+              onClick={handleAddToCart}
+              className="w-[50%] py-2 rounded-sm border-gray-600 text-gray-600 border transition-all duration-500 hover:bg-black hover:text-white active:scale-95 "
+            >
+              Add to Cart
+            </button>
+            <button
+              onClick={handleAddToCart}
+              className="w-[50%] py-2 rounded-sm border-gray-600 text-gray-600 border transition-all duration-500 hover:bg-black hover:text-white active:scale-95 "
+            >
+              Add to WishList
+            </button>
+          </div>
         </div>
       </div>
     </div>

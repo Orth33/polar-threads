@@ -37,7 +37,7 @@ export default function NewsletterSignup() {
                 setFormData({ ...formData, firstName: e.target.value })
               }
               required
-              className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+              className="w-full px-4 py-3 rounded-sm border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             />
           </div>
           <div>
@@ -49,12 +49,12 @@ export default function NewsletterSignup() {
                 setFormData({ ...formData, email: e.target.value })
               }
               required
-              className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+              className="w-full px-4 py-3 rounded-sm border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             />
           </div>
           <button
             type="submit"
-            className="w-full mt-10 px-6 py-2 border rounded-md border-gray-400 text-base font-medium text-gray-600 hover:border-gray-700 transition-colors shadow-gray-300/50 hover:shadow-gray-700/50"
+            className="w-full mt-10 mb-4 px-6 py-2 border rounded-sm border-gray-400 text-gray-600 text-base font-medium hover:bg-black transition-colors duration-500 hover:text-white active:scale-95"
           >
             Join Now
           </button>

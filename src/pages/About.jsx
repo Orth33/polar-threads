@@ -1,9 +1,9 @@
 export default function About() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      {/* <h1 className="font-tafabricans text-4xl font-bold text-gray-900 mb-8">
+      <h1 className="font-tafabricans text-4xl font-bold text-gray-900 mb-8">
         About Polar Threads
-      </h1> */}
+      </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
@@ -24,6 +24,11 @@ export default function About() {
               winter wear and a commitment to keeping our customers warm and
               stylish during the coldest months of the year.
             </p>
+            <img
+              src="https://media.giphy.com/media/3o84sBmXpVo5W/giphy.gif"
+              alt="Winter fashion"
+              className="mt-4 rounded-lg shadow-lg"
+            />
           </div>
 
           <div>
@@ -35,6 +40,11 @@ export default function About() {
               fashionable. Our mission is to provide high-quality, sustainable
               winter clothing that keeps you warm without compromising on style.
             </p>
+            <img
+              src="https://media.giphy.com/media/3o84sBmXpVo5W/giphy.gif"
+              alt="Winter fashion"
+              className="mt-4 rounded-lg shadow-lg"
+            />
           </div>
 
           <div>
@@ -46,6 +56,11 @@ export default function About() {
               ensure it meets our high standards for quality, durability, and
               comfort. We stand behind every product we sell.
             </p>
+            <img
+              src="https://media.giphy.com/media/3o84sBmXpVo5W/giphy.gif"
+              alt="Winter fashion"
+              className="mt-4 rounded-lg shadow-lg"
+            />
           </div>
         </div>
       </div>
@@ -63,6 +78,11 @@ export default function About() {
               We're committed to reducing our environmental impact through
               sustainable materials and ethical manufacturing processes.
             </p>
+            <img
+              src="https://media.giphy.com/media/3o84sBmXpVo5W/giphy.gif"
+              alt="Sustainability"
+              className="mt-4 rounded-lg shadow-lg"
+            />
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow-md">
@@ -73,6 +93,11 @@ export default function About() {
               We never compromise on quality, ensuring that each product meets
               our rigorous standards for durability and performance.
             </p>
+            <img
+              src="https://media.giphy.com/media/3o84sBmXpVo5W/giphy.gif"
+              alt="Quality"
+              className="mt-4 rounded-lg shadow-lg"
+            />
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow-md">
@@ -83,6 +108,11 @@ export default function About() {
               We believe in building a community of winter enthusiasts and
               supporting local initiatives that promote outdoor activities.
             </p>
+            <img
+              src="https://media.giphy.com/media/3o84sBmXpVo5W/giphy.gif"
+              alt="Community"
+              className="mt-4 rounded-lg shadow-lg"
+            />
           </div>
         </div>
       </div>

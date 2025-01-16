@@ -117,7 +117,7 @@ export default function InstallmentBanner() {
 
         <Link
           to="/payment-options"
-          className="inline-block mt-10 mb-4 px-6 py-2 border rounded-md border-gray-400 text-base font-medium text-gray-600 hover:border-gray-700 transition-colors shadow-gray-300/50 hover:shadow-gray-700/50"
+          className="inline-block mt-10 mb-4 px-6 py-2 border rounded-sm border-gray-400 text-gray-600 text-base font-medium hover:bg-black transition-colors duration-500 hover:text-white active:scale-95"
         >
           Learn More
         </Link>

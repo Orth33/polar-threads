@@ -102,7 +102,7 @@ export default function Carousel() {
                   viewport={{ once: true }}
                   transition={{ type: "tween", duration: 0.4 }}
                 >
-                  <button className="bg-white text-gray-900 px-8 py-2 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                  <button className="bg-white text-gray-900 px-8 py-2 rounded-full font-semibold hover:bg-gray-300 transition-colors">
                     {slide.cta}
                   </button>
                 </motion.div>

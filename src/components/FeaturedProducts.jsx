@@ -42,12 +42,15 @@ export default function FeaturedProducts() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {featuredProducts.map((product) => (
-        <div key={product.id} className="bg-white shadow-md overflow-hidden">
+        <div
+          key={product.id}
+          className="overflow-hidden transition-all duration-150 hover:scale-105 hover:shadow-lg"
+        >
           <Link to={`/product/${product.id}`}>
             <img
               src={product.image}
               alt={product.name}
-              className="w-full h-64 object-cover hover:opacity-90 transition-opacity"
+              className="w-full h-64 object-cover "
             />
           </Link>
           <div className="p-4">
@@ -58,16 +61,12 @@ export default function FeaturedProducts() {
             </Link>
             <p className="text-gray-600 text-sm mb-2">{product.category}</p>
             <div className="flex items-center justify-between">
-              <span className="text-primary-600 font-bold">
-                ${product.price}
-              </span>
+              <span className="text-black font-bold">${product.price}</span>
               <button
                 onClick={() => addToCart(product)}
-                className="border px-4 py-2 rounded-md border-gray-400 text-base font-medium text-gray-600 hover:border-gray-700 transition-colors shadow-gray-300/50 hover:shadow-gray-700/50"
+                className="border px-4 py-2 rounded-sm text-sm border-gray-400 text-gray-600 transition-all duration-500 hover:bg-black hover:text-white active:scale-95"
               >
-                <h2 className="text-sm text-center text-gray-600">
-                  Add to Cart
-                </h2>
+                Add to Cart
               </button>
             </div>
           </div>
