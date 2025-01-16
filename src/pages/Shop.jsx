@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
 import Input from "../elements/Input";
+import { motion } from "framer-motion"; // Importing framer-motion for animations
 
 const categories = ["All", "Jackets", "Accessories", "Footwear"];
 
@@ -160,7 +161,7 @@ export default function Shop() {
         {/* Categories */}
         <div className="flex space-x-4 mb-8">
           {categories.map((category) => (
-            <button
+            <motion.button
               key={category}
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-md ${
@@ -168,9 +169,11 @@ export default function Shop() {
                   ? "bg-black text-white"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
+              whileHover={{ scale: 1.05 }} // Scale effect on hover
+              whileTap={{ scale: 0.95 }} // Scale effect on tap
             >
               {category}
-            </button>
+            </motion.button>
           ))}
         </div>
 
@@ -197,9 +200,12 @@ export default function Shop() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
-            <div
+            <motion.div
               key={product.id}
-              className="bg-white shadow-md overflow-hidden"
+              className="overflow-hidden transition-all duration-150 hover:scale-105 hover:shadow-lg"
+              initial={{ opacity: 0 }} // Initial opacity
+              animate={{ opacity: 1 }} // Animate to full opacity
+              transition={{ duration: 0.5 }} // Transition duration
             >
               <img
                 src={product.image}
@@ -221,7 +227,7 @@ export default function Shop() {
                   </button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))
         ) : (
           <div className="text-center text-gray-600">No products found.</div>
