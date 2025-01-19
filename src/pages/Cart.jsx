@@ -22,7 +22,7 @@ export default function Cart() {
           <p className="text-gray-600 mb-4">Your cart is empty</p>
           <Link
             to="/shop"
-            className="inline-block bg-primary-600 text-white px-6 py-3 rounded-md hover:bg-primary-700 transition-colors"
+            className="inline-block text-black px-6 py-3 border rounded-md border-gray-400 hover:bg-black hover:text-white transition-colors duration-500"
           >
             Continue Shopping
           </Link>
@@ -111,7 +111,7 @@ export default function Cart() {
             </div>
           </div>
           <div>
-            <button className="w-full mt-10 px-6 py-2 border rounded-md border-gray-400 text-base font-medium text-gray-600 hover:border-gray-700 transition-colors shadow-gray-300/50 hover:shadow-gray-700/50">
+            <button className="w-full mt-10 mb-4 px-6 py-2 border rounded-sm border-gray-400 text-gray-600 text-base font-medium hover:bg-black transition-colors duration-500 hover:text-white active:scale-95">
               Proceed to Checkout
             </button>
             {/* <button className="w-full mt-5 px-6 py-2 border rounded-md border-gray-400 text-base font-medium text-gray-600 hover:border-gray-700 transition-colors shadow-gray-300/50 hover:shadow-gray-700/50">

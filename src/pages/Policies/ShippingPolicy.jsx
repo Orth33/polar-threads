@@ -1,9 +1,11 @@
 export default function ShippingPolicy() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="font-tafabricans text-center text-3xl font-extrabold text-gray-900 mb-4">
-        Shipping Policy{" "}
-      </h1>
+      {/* <div className="text-center">
+        <h1 className="font-tafabricans text-3xl font-bold mb-8 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-center inline-block text-transparent bg-clip-text">
+          Shipping Policy
+        </h1>
+      </div> */}
 
       <div className="space-y-8">
         <section>

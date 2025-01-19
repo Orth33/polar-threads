@@ -16,9 +16,11 @@ export default function SizeGuide() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="font-tafabricans text-center text-3xl font-bold text-gray-900 mb-8">
-        Size Guide
-      </h1>
+      {/* <div className="text-center">
+        <h1 className="font-tafabricans text-3xl font-bold mb-8 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-center inline-block text-transparent bg-clip-text">
+          Size Guide
+        </h1>
+      </div> */}
 
       <div className="space-y-12">
         <section>
