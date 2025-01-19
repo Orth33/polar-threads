@@ -25,7 +25,7 @@ export default function About() {
               stylish during the coldest months of the year.
             </p>
             <img
-              src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWEwdmtvbHp0dTJ2enJlam1uN25sN2pmdTR1cXhpb2N5eHBpMDAwNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iB37W6VDrWWAw/giphy.gif"
+              src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExanhuN2t5c3VoM2duaXRxdzgzbDk1cTJ5a2gzdGJhdHNjN203aXFuNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xeRIgCObC7w7Q7fIZ4/giphy.gif"
               alt="Winter fashion"
               className="w-[400px] h-[250px] mt-4 rounded-lg shadow-lg overflow-hidden"
             />
@@ -96,7 +96,7 @@ export default function About() {
               <img
                 src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmhkcThrc3I2ODFuYWpmeDNlb2czNnIxcTZrajNycDd2MHAweDE1MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DebOzNVDQYum13U7zM/giphy.gif"
                 alt="Quality"
-                className="w-full h-[336px] mt-4 rounded-lg shadow-lg overflow-hidden"
+                className="w-full h-[336px] mt-4 rounded-lg shadow-lg"
               />
             </div>
 
@@ -109,9 +109,9 @@ export default function About() {
                 supporting local initiatives that promote outdoor activities.
               </p>
               <img
-                src="https://media.giphy.com/media/3o84sBmXpVo5W/giphy.gif"
+                src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3ZxdGI1dHRoY2l5MmgzcW82MzI1aHlmaWRzN2Rqa2wxZXhvZXFjYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9qRnmAgikuIxMj0N5V/giphy.gif"
                 alt="Community"
-                className="w-full h-[336px] mt-4 rounded-lg shadow-lg overflow-hidden"
+                className="w-full h-[336px] mt-4 rounded-lg shadow-lg"
               />
             </div>
           </div>
